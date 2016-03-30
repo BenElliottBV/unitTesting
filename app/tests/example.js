@@ -1,7 +1,7 @@
-// A sample QUnit test
-QUnit.test("equal test", function (assert) {
-  assert.equal( 0, 0, "Zero, Zero; equal succeeds" );
-  assert.equal( "", 0, "Empty, Zero; equal succeeds" );
-  assert.equal( "", "", "Empty, Empty; equal succeeds" );
-  assert.equal( 0, false, "Zero, false; equal succeeds" );
+var mainViewModel = require("../main-view-model").createViewModel();
+
+QUnit.test("Hello World Sample Test:", function (assert) {
+    console.log(mainViewModel);
+    assert.equal( mainViewModel.counter, 42, "Counter, 42; equal succeeds." );
+    assert.equal( mainViewModel.message, "42 taps left", "Message, 42 taps left; equal succeeds." ); 
 });
